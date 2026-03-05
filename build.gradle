@@ -1,0 +1,33 @@
+plugins {
+    id 'fabric-loom' version '1.15.3'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modCompileOnly "net.fabricmc:fabric-loader:${loader_version}"
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = project.maven_group
+            artifactId = project.archives_base_name
+            version = project.mod_version
+
+            from components.java
+        }
+    }
+}
+
+java {
+    withSourcesJar()
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hamoni",
+  "version": "${version}",
+  "name": "hamoni",
+  "description": "Minecraft formatter used in nami client!",
+  "authors": ["Kiriyaga7615"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "nami.development.hamoni.Hamoni"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
