@@ -8,11 +8,6 @@
   "contact": {},
   "license": "All-Rights-Reserved",
   "environment": "client",
-  "entrypoints": {
-    "main": [
-      "nami.development.hamoni.Hamoni"
-    ]
-  },
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric-api": "*",
