@@ -11,7 +11,7 @@ public class HamoniFormatter {
     private final DynamicTextRegistry dynamicTextRegistry = new DynamicTextRegistry();
     private final FormatterEngine engine;
 
-    private HamoniFormatter() {
+    public HamoniFormatter() {
         this.engine = new FormatterEngine(this);
     }
 
