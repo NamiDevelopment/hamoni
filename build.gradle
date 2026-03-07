@@ -3,6 +3,20 @@ plugins {
     id 'maven-publish'
 }
 
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "loader_version", project.loader_version
+    inputs.property "minecraft_version", project.minecraft_version
+
+    filesMatching("fabric.mod.json") {expand(
+            version: project.version,
+            loader_version: project.loader_version,
+            minecraft_version: project.minecraft_version
+    )
+    }
+}
+
 version = project.mod_version
 group = project.maven_group
 

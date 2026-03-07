@@ -10,7 +10,6 @@
   "environment": "client",
   "depends": {
     "fabricloader": "*",
-    "fabric-api": "*",
     "minecraft": "*"
   }
 }
